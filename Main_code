@@ -1,0 +1,42 @@
+#--------
+#Writing_greatness
+#October_19_2021
+#Graden_rusk
+#--------
+
+#----Functions----#
+def start():
+    print("I'm going to make a new file.")
+    print("let's make a list with the names of the week.")
+    print("What will the file name be?")
+    awnser = input(">>>" )
+    new_file = awnser + '.txt'
+    writing = open(new_file, 'w')
+    play = True
+    day = 1
+    while play == True:
+        awnser_2 = input(f"What is the {day}(s) day of the week." )
+        day = day + 1
+        writing.write(awnser_2)
+        writing.write(" ")
+        if day == 8:
+            play = False
+        else:
+            play = True
+    print("Good job.")
+    print("Do you want to add the months(I wasn't asking.)")
+    play = True
+    good = 1
+    while play == True:
+        awnser_3 = input("Name the month.\n>>>" )
+        good = good + 1
+        writing.write(awnser_3)
+        writing.write(" ")
+        if good == 13:
+            print("closing file.")
+            play = False
+        else:
+            play = True
+ 
+#----Main Code Start Here----#
+start()
